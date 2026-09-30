@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>MarketLink • First admin</title>
+    <link rel="stylesheet" href="/CSS/panels.css" />
+  </head>
+  <body>
+    <div class="auth-wrap">
+      <main class="auth-left">
+        <a
+          class="brand"
+          href="/panels/admin-login.html"
+          style="color: #173f35; padding: 0"
+          ><img
+            class="brand-logo"
+            src="/images/marketlink-mark.svg"
+            alt=""
+            width="39"
+            height="39"
+          /><span>MarketLink<small>FIRST ADMIN</small></span></a
+        >
+        <h1>Create the first admin</h1>
+        <p>
+          This works only before any admin exists. Enter the private
+          ADMIN_SETUP_KEY from backend/.env; it is never saved in your browser.
+        </p>
+        <form id="setupForm">
+          <label class="field"
+            >Setup key<input name="setupKey" type="password" required /></label
+          ><label class="field">Admin name<input name="name" required /></label
+          ><label class="field"
+            >Admin email<input name="email" type="email" required /></label
+          ><label class="field"
+            >Password<input
+              name="password"
+              type="password"
+              minlength="8"
+              required /></label
+          ><button class="btn">Create single admin</button>
+          <div id="message"></div>
+        </form>
+        <div class="auth-links">
+          <a href="/panels/admin-login.html">← Admin sign in</a>
+        </div>
+      </main>
+      <aside class="auth-right">
+        <h2>One administrator account for the platform.</h2>
+        <p>
+          The server blocks registration after the first admin account is
+          created.
+        </p>
+      </aside>
+    </div>
+    <script type="module" src="/JS/auth.js"></script>
+  </body>
+</html>

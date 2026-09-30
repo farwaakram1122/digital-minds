@@ -1,0 +1,3 @@
+import { useEffect,useState } from 'react';
+import { api } from '../../services/api';
+export default function AdminOrders(){const [rows,setRows]=useState([]);useEffect(()=>{api('/orders').then(setRows).catch(console.error)},[]);return <><div className="dash-heading"><div><div className="eyebrow">OPERATIONS</div><h1>Orders</h1><p>Platform pickup reservations.</p></div></div><div className="card padded table-wrap"><table><thead><tr><th>Order</th><th>Customer</th><th>Farmer</th><th>Pickup</th><th>Total</th><th>Status</th></tr></thead><tbody>{rows.map(o=><tr key={o.id}><td>{o.id.slice(-8)}</td><td>{o.customer}</td><td>{o.farmerId}</td><td>{o.pickupDate} {o.pickupSlot}</td><td>Rs {o.total}</td><td>{o.status}</td></tr>)}</tbody></table></div></>}

@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>MarketLink • Farmer Panel</title>
+    <link rel="stylesheet" href="/CSS/panels.css" />
+  </head>
+  <body data-role="farmer">
+    <!-- The shared shell stays aligned while the role script fills the page. -->
+    <div class="shell">
+      <aside class="sidebar" id="sidebar">
+        <a href="/panels/login.html" class="brand"
+          ><img
+            class="brand-logo"
+            src="/images/marketlink-mark.svg"
+            alt=""
+            width="39"
+            height="39"
+          /><span>MarketLink<small>LOCAL MARKET</small></span></a
+        >
+        <div class="nav-label">FARMER WORKSPACE</div>
+        <nav class="nav" id="nav"></nav>
+        <div class="side-foot">
+          Fresh local produce.<br />One connected market.
+        </div>
+      </aside>
+      <div class="main">
+        <header class="topbar">
+          <div class="row">
+            <button class="hamburger" id="menu" aria-label="Toggle navigation">
+              ☰
+            </button>
+            <div class="top-titles">
+              <small id="breadcrumb">MarketLink / Dashboard</small
+              ><strong id="topTitle">Overview</strong>
+            </div>
+          </div>
+          <div class="top-actions">
+            <label class="top-search"
+              ><span aria-hidden="true">⌕</span
+              ><input
+                id="globalSearch"
+                placeholder="Search workspace"
+                aria-label="Search workspace" /></label
+            ><button
+              class="top-icon"
+              id="themeToggle"
+              title="Toggle dark mode"
+              aria-label="Toggle dark mode"
+            >
+              ☾</button
+            ><button
+              class="top-icon"
+              id="quickAlerts"
+              title="Open activity"
+              aria-label="Open activity"
+            >
+              ♧</button
+            ><span class="role-chip">Farmer</span
+            ><span class="avatar" id="avatar">M</span>
+          </div>
+        </header>
+        <main class="content" id="content" aria-live="polite"></main>
+      </div>
+    </div>
+    <div id="overlay"></div>
+    <div id="toastHost"></div>
+    <script type="module" src="/JS/farmer.js"></script>
+  </body>
+</html>

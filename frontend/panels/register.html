@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>MarketLink • Register</title>
+    <link rel="stylesheet" href="/CSS/panels.css" />
+  </head>
+  <body>
+    <div class="auth-wrap">
+      <main class="auth-left">
+        <a
+          class="brand"
+          href="/panels/login.html"
+          style="color: #173f35; padding: 0"
+          ><img
+            class="brand-logo"
+            src="/images/marketlink-mark.svg"
+            alt=""
+            width="39"
+            height="39"
+          /><span>MarketLink<small>LOCAL MARKET</small></span></a
+        >
+        <h1>Join MarketLink</h1>
+        <p>
+          Register as a customer or a farmer. Farmer accounts need admin
+          approval before sign in.
+        </p>
+        <form id="registerForm">
+          <div class="form-grid">
+            <label class="field"
+              >Register as<select name="role" id="role">
+                <option value="customer">Customer</option>
+                <option value="farmer">Farmer</option>
+              </select></label
+            ><label class="field"
+              >Full name / contact person<input name="name" required /></label
+            ><label class="field farmer-only" hidden
+              >Stall / business name<input name="business" /></label
+            ><label class="field">Phone<input name="phone" required /></label
+            ><label class="field"
+              >Email<input name="email" type="email" required /></label
+            ><label class="field span-2"
+              >Address<input name="address" required /></label
+            ><label class="field"
+              >Password<input
+                name="password"
+                type="password"
+                minlength="8"
+                required /></label
+            ><label class="field"
+              >Confirm password<input
+                name="confirm"
+                type="password"
+                minlength="8"
+                required
+            /></label>
+          </div>
+          <button class="btn">Create account</button>
+          <div id="message"></div>
+        </form>
+        <div class="auth-links">
+          <a href="/panels/login.html">Already registered? Sign in</a>
+        </div>
+      </main>
+      <aside class="auth-right">
+        <div class="eyebrow" style="color: #b4e6c0">GROW TOGETHER</div>
+        <h2>A closer link between farmers and shoppers.</h2>
+        <p>
+          Set up your stall, share this week's produce and offer convenient
+          market pickup.
+        </p>
+      </aside>
+    </div>
+    <script type="module" src="/JS/auth.js"></script>
+  </body>
+</html>
