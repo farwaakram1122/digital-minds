@@ -2,8 +2,7 @@
 import "dotenv/config";
 import { fileURLToPath } from "node:url";
 import mongoose from "mongoose";
-import { seedMarkets, categories } from "../../frontend/src/data/platformData.js";
-import { User, Market, Product, Category, Order, Review, Notification, Message } from "./models.js";
+import { seedMarkets, categories } from "./data/platformData.js";import { User, Market, Product, Category, Order, Review, Notification, Message } from "./models.js";
 
 // Remove only the known demo accounts from earlier ZIP versions, keeping real registrations.
 export async function prepareCatalog() {
