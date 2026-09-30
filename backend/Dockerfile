@@ -1,18 +1,14 @@
 FROM node:20-alpine
 
-WORKDIR /app/backend
+WORKDIR /app
 
-COPY backend/package*.json ./
+COPY package*.json ./
 
 RUN npm install
 
-ARG CACHE_BUST=3
+ARG CACHE_BUST=4
 
-COPY backend ./
-COPY frontend /app/frontend
-COPY CSS /app/CSS
-COPY JS /app/JS
-COPY images /app/images
+COPY . .
 
 EXPOSE 5000
 

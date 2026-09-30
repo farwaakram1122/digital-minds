@@ -1,7 +1,5 @@
 // Express serves the HTML panels and JSON API from one backend.
 import "dotenv/config";
-import path from "node:path";
-import { fileURLToPath } from "node:url";
 import express from "express";
 import cors from "cors";
 import helmet from "helmet";
@@ -18,10 +16,7 @@ import { prepareCatalog } from "./seed.js";
 
 const app = express();
 if (process.env.NODE_ENV === "production") app.set("trust proxy", 1);
-const projectRoot = path.resolve(
-  path.dirname(fileURLToPath(import.meta.url)),
-  "../..",
-);
+
 
 app.use(
   helmet({
@@ -51,13 +46,14 @@ app.use(
 );
 app.use(express.json({ limit: "1mb" }));
 
+
 // These HTML pages and assets are served by the backend itself.
-app.use("/panels", express.static(path.join(projectRoot, "frontend/panels")));
-app.use("/CSS", express.static(path.join(projectRoot, "CSS")));
-app.use("/JS", express.static(path.join(projectRoot, "JS")));
-app.use("/images", express.static(path.join(projectRoot, "images")));
-app.get("/", (req, res) => res.redirect("/panels/login.html"));
-app.get("/panels", (req, res) => res.redirect("/panels/login.html"));
+app.get("/", (req, res) => {
+  res.json({
+    ok: true,
+    message: "MarketLink API is running",
+  });
+});
 
 app.use("/api/auth", rateLimit({ windowMs: 15 * 60 * 1000, limit: 60 }));
 app.use("/api/contact", rateLimit({ windowMs: 15 * 60 * 1000, limit: 10 }));
