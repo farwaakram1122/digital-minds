@@ -19,7 +19,7 @@ import {
   role,
   notify,
 } from "../common.js";
-import { unitsFor } from "../../../JS/productUnits.js";
+import { unitsFor } from "../../JS/productUnits.js";
 
 const router = Router();
 const validImage = value => !value || /^https:\/\/\S+$/i.test(value) || /^\/api\/uploads\/[0-9a-f]{24}$/i.test(value);
