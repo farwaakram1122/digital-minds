@@ -6,6 +6,7 @@ COPY package*.json ./
 
 RUN npm install
 
+ARG CACHE_BUST=2
 COPY . .
 
 EXPOSE 5000
