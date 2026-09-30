@@ -1,4 +1,4 @@
-const BASE = import.meta.env.VITE_BACKEND_URL || '/api';
+const BASE = `${import.meta.env.VITE_BACKEND_URL}/api`;
 export const panelUrl = (page = 'login') => `${BASE.replace(/\/api\/?$/, '')}/panels/${page}.html`;
 export async function api(path, { method = 'GET', body, token } = {}) {
   const session = token || sessionStorage.getItem('ml_token');
