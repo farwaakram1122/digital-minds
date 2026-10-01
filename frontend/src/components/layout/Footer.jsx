@@ -44,7 +44,7 @@ export default function Footer() {
           <Link to="/faq">FAQ</Link>
           <Link to="/contact">Contact</Link>
           <Link to="/privacy">Privacy</Link>
-          <Link to="/login">Account</Link>
+          <a href="/panels/login.html">Account</a>
         </div>
 
         <div>

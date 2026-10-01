@@ -162,7 +162,7 @@ export default function Cart() {
             {hasSamples && <p className="warning-note">Sample cards demonstrate the cart. Only products added by approved farmers can be reserved.</p>}
             <Link
               className="btn btn-primary full"
-              to={!user ? '/login' : hasSamples ? '/products' : '/checkout'}
+              to={!user ? '/panels/login.html' : hasSamples ? '/products' : '/checkout'}
             >
               {!user ? 'Continue · sign in or register' : hasSamples ? 'Browse live farmer stock' : 'Continue to pickup'}
               <ArrowRight size={17} />

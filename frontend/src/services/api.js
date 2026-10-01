@@ -1,5 +1,5 @@
 const BASE = `${import.meta.env.VITE_BACKEND_URL}/api`;
-export const panelUrl = (page = 'login') => `/${page}`;
+export const panelUrl = (page = 'login') => `/panels/${page}.html`;
 export async function api(path, { method = 'GET', body, token } = {}) {
   const session = token || sessionStorage.getItem('ml_token');
   const response = await fetch(`${BASE}${path}`, {

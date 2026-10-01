@@ -47,7 +47,7 @@ export default function Checkout() {
 
   async function handleSubmit(event) {
     event.preventDefault();
-    if (!user) { navigate('/login'); return; }
+    if (!user) { window.location.href = '/panels/login.html'; return; }
     if (user.role !== 'customer') { setError('Sign in as a customer to reserve stock.'); return; }
     if (!marketId || !pickupDate || !pickupSlot) { setError('Choose a shared market, date and pickup slot.'); return; }
     setError('');
