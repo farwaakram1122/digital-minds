@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>MarketLink • Sign in</title>
+    <link rel="stylesheet" href="/CSS/panels.css" />
+  </head>
+  <body>
+    <div class="auth-wrap">
+      <main class="auth-left">
+        <a
+          class="brand"
+          href="/panels/login.html"
+          style="color: #173f35; padding: 0"
+          ><img
+            class="brand-logo"
+            src="/images/marketlink-mark.svg"
+            alt=""
+            width="39"
+            height="39"
+          /><span>MarketLink<small>LOCAL MARKET</small></span></a
+        >
+        <div class="eyebrow" style="margin-top: 35px">WELCOME BACK</div>
+        <h1>Sign in to your workspace</h1>
+        <p>
+          Customer and farmer accounts use the same role based sign in. Admin
+          has a separate entry below.
+        </p>
+        <form id="loginForm">
+          <label class="field"
+            >Email address<input
+              name="email"
+              type="email"
+              required
+              autocomplete="username" /></label
+          ><label class="field"
+            >Password<input
+              name="password"
+              type="password"
+              required
+              autocomplete="current-password" /></label
+          ><button class="btn">Sign in</button>
+          <div id="message"></div>
+        </form>
+        <div class="auth-links">
+          <a href="/panels/register.html">Create customer or farmer account</a
+          ><a href="/panels/admin-login.html">Admin sign in →</a>
+        </div>
+      </main>
+      <aside class="auth-right">
+        <div class="eyebrow" style="color: #b4e6c0">FRESH FROM LOCAL FARMS</div>
+        <h2>Everything your market needs, in one place.</h2>
+        <p>
+          Plan the harvest, reserve fresh stock and collect directly from the
+          farmer. Every order is paid at pickup.
+        </p>
+        <div>
+          <span class="pill">Weekly inventory</span
+          ><span class="pill">Market pickup</span
+          ><span class="pill">Local community</span>
+        </div>
+      </aside>
+    </div>
+    <script type="module" src="/JS/auth.js"></script>
+  </body>
+</html>

@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>MarketLink • Admin sign in</title>
+    <link rel="stylesheet" href="/CSS/panels.css" />
+  </head>
+  <body>
+    <div class="auth-wrap">
+      <main class="auth-left">
+        <a
+          class="brand"
+          href="/panels/login.html"
+          style="color: #173f35; padding: 0"
+          ><img
+            class="brand-logo"
+            src="/images/marketlink-mark.svg"
+            alt=""
+            width="39"
+            height="39"
+          /><span>MarketLink<small>ADMIN ACCESS</small></span></a
+        >
+        <div class="eyebrow" style="margin-top: 35px">PLATFORM CONTROL</div>
+        <h1>Administrator sign in</h1>
+        <p>
+          Dedicated access for approving farmers, managing markets and reviewing
+          platform reports.
+        </p>
+        <form id="loginForm" data-admin="true">
+          <label class="field"
+            >Admin email<input name="email" type="email" required /></label
+          ><label class="field"
+            >Password<input name="password" type="password" required /></label
+          ><button class="btn">Open admin panel</button>
+          <div id="message"></div>
+        </form>
+        <div class="auth-links">
+          <a href="/panels/login.html">← Customer / farmer sign in</a
+          ><a href="/panels/admin-setup.html">First admin setup</a>
+        </div>
+      </main>
+      <aside class="auth-right">
+        <div class="eyebrow" style="color: #b4e6c0">MARKETLINK MANAGEMENT</div>
+        <h2>Clear oversight for a growing local market.</h2>
+        <p>
+          Registrations, listings, locations, reviews and reporting together in
+          one dashboard.
+        </p>
+      </aside>
+    </div>
+    <script type="module" src="/JS/auth.js"></script>
+  </body>
+</html>
